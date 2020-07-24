@@ -35,9 +35,6 @@
                         user: this.user,
                         message: this.message
                     })
-                    .then(response => {
-                        console.log(response.data)
-                    })
             }
         }
     }
