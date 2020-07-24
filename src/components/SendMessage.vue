@@ -29,6 +29,7 @@
         methods: {
             sendNewMessage(e) {
                 e.preventDefault();
+                axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
                 axios
                     .post('http://localhost:8080/messages', {
                         user: this.user,

@@ -23,7 +23,7 @@
         name: 'Messages',
         data() {
             return {
-                messages:null
+                messages: null
             }
         },
         mounted() {
@@ -31,6 +31,7 @@
         },
         methods: {
             getNewMessages() {
+                axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
                 axios
                     .get('http://localhost:8080/messages')
                     .then(response => {
